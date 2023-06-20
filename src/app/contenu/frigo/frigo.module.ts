@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FrigoComponent } from './frigo.component';
 import { FrigoRoutingModule } from './frigo.routing';
 import { PagesModule } from 'src/app/pages/pages.module';
+import { AddIngrComponent } from './add-ingr/add-ingr.component';
+import { DelIngrComponent } from './del-ingr/del-ingr.component';
 
 @NgModule({
   imports: [
@@ -10,6 +12,6 @@ import { PagesModule } from 'src/app/pages/pages.module';
     FrigoRoutingModule,
     PagesModule
   ],
-  declarations: [FrigoComponent]
+  declarations: [FrigoComponent, AddIngrComponent, DelIngrComponent]
 })
 export class FrigoModule { }
