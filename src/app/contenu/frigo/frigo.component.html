@@ -1,6 +1,17 @@
 <div id="page" class="hfeed site"><!-- start page wrapper -->
-  <app-header></app-header>
-
-
-  <app-footer></app-footer>
+  <div style="position: relative">
+    <app-header></app-header>
+  </div>
+  <div class="Frigo" >
+    <h1>Mon frigo virtuel</h1>
+    <div class="Add" >
+      <a routerLink="./add-ingr" class="route-add"> Ajouter un ingrédient </a>
+    </div>
+    <div class="Del">
+      <a routerLink="./del-ingr" class="route-del"> Supprimer un ingrédient </a>
+    </div>
+  </div>
+  <div class="foot">
+    <app-footer></app-footer>
+  </div>
 </div><!-- end #page hfeed site -->
