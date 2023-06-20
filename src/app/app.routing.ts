@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./contenu/recettes/recettes.module').then(m => m.RecettesModule)
   },
   {
-    path: "my-frigo",
+    path: "frigo",
     loadChildren: () => import('./contenu/frigo/frigo.module').then(m => m.FrigoModule)
   },
   {
