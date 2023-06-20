@@ -1,0 +1,38 @@
+/* Styles pour le conteneur principal */
+.menu-planner-container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: red;
+}
+
+/* Styles pour les étiquettes */
+.menu-planner-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styles pour les boutons */
+.menu-planner-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-planner-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour la liste du menu généré */
+.menu-planner-menu-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-planner-menu-list li {
+  margin-bottom: 5px;
+}
+
+/* Autres styles spécifiques au besoin du composant */

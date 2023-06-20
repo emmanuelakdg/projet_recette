@@ -10,10 +10,14 @@ import { FrigoModule } from './contenu/frigo/frigo.module';
 import { FavorisModule } from './contenu/favoris/favoris.module';
 import { MenuModule } from './contenu/menu/menu.module';
 import { AproposModule } from './contenu/apropos/apropos.module';
+import { MenuPlannerComponent } from './contenu/PlanifierMenu/menu-planner.component';
+import { FormsModule } from '@angular/forms';
+import { MenuPlannerModule } from './contenu/PlanifierMenu/menu-planner.module';
 
 @NgModule({
   declarations: [	
-    AppComponent
+    AppComponent,
+    //MenuPlannerComponent
    ],
   imports: [
     BrowserModule,
@@ -21,10 +25,12 @@ import { AproposModule } from './contenu/apropos/apropos.module';
     PagesModule,
     AccueilModule,
     RecettesModule,
+    FormsModule,
     FrigoModule,
     FavorisModule,
     MenuModule,
-    AproposModule
+    AproposModule,
+    MenuPlannerModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+//import { MenuPlannerComponent } from './contenu/PlanifierMenu/menu-planner.component';
 
 const routes: Routes = [
   { 
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: "apropos",
     loadChildren: () => import('./contenu/apropos/apropos.module').then(m => m.AproposModule)
   },
+
+  { path: "PlanifierMenu",
+  loadChildren: () => import('./contenu/PlanifierMenu/menu-planner.module').then(m => m.MenuPlannerModule)
+}
+
 ];
 
 @NgModule({

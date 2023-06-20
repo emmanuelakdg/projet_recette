@@ -1,0 +1,24 @@
+
+<h2>Planificateur de menu</h2>
+
+<div>
+  <label for="start-date">Date de début :</label>
+  <input type="date" id="start-date" [(ngModel)]="startDate">
+</div>
+
+<div>
+  <label for="end-date">Date de fin :</label>
+  <input type="date" id="end-date" [(ngModel)]="endDate">
+</div>
+
+<button (click)="generateMenu()">Générer le menu</button>
+
+<hr>
+
+<div *ngIf="menuGenerated">
+  <h3>Menu généré :</h3>
+  <ul>
+    <li *ngFor="let meal of menu">{{ meal }}</li>
+  </ul>
+</div>
+
