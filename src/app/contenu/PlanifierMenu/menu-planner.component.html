@@ -1,15 +1,23 @@
 
-<h2>Planificateur de menu</h2>
+<link rel="stylesheet" type="text/css" href="./menu-planner.component.css">
+
+<h2 class="menu-planner-title">Planificateur de menu</h2>
+
+
+<body>
+  
 
 <div>
   <label for="start-date">Date de début :</label>
   <input type="date" id="start-date" [(ngModel)]="startDate">
 </div>
 
+
 <div>
   <label for="end-date">Date de fin :</label>
   <input type="date" id="end-date" [(ngModel)]="endDate">
-</div>
+</div> 
+</body>
 
 <button (click)="generateMenu()">Générer le menu</button>
 
