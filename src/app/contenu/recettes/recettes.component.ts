@@ -11,5 +11,10 @@ export class RecettesComponent implements OnInit {
 
   ngOnInit() {
   }
+  ngAfterViewInit(): void {
+    var script1 = document.createElement('script');
+    script1.src = "../../../assets/js/main.js";
+    document.body.append(script1);
+  }
 
 }
