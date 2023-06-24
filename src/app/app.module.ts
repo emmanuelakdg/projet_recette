@@ -13,6 +13,7 @@ import { AproposModule } from './contenu/apropos/apropos.module';
 import { MenuPlannerComponent } from './contenu/PlanifierMenu/menu-planner.component';
 import { FormsModule } from '@angular/forms';
 import { MenuPlannerModule } from './contenu/PlanifierMenu/menu-planner.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [	
@@ -30,7 +31,8 @@ import { MenuPlannerModule } from './contenu/PlanifierMenu/menu-planner.module';
     FavorisModule,
     MenuModule,
     AproposModule,
-    MenuPlannerModule
+    MenuPlannerModule,
+    HttpClientModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

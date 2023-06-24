@@ -8,7 +8,7 @@ import { PagesModule } from 'src/app/pages/pages.module';
   imports: [
     CommonModule,
     RecettesRoutingModule,
-    PagesModule
+    PagesModule,
   ],
   declarations: [RecettesComponent]
 })
