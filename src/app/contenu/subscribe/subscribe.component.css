@@ -1,8 +1,8 @@
-.Frigo {
+.subscribe{
     position: absolute;
     height: 67%;
     width: 100%; 
-    background-image: url('/assets/images/content/frigo-add.jpg');
+    background-image: url('/assets/images/content/cuisine.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: rgb(255, 255, 255);
@@ -14,20 +14,20 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.1em;
-    text-shadow: 0px 4px 4px rgba(11, 48, 182, 0.25);
-  }
-  
-  .Add{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login{
     position: relative; 
-    width: 300px;
+    width: 200px;
     height: 60px; 
     margin: auto; 
     top: 10%;
     border-radius: 20px;
     background-color: aliceblue;
-  }
+}
 
-  .route-add{
+.route-log{
     border-radius: 20px; 
     position: relative; 
     height: 100%; 
@@ -38,17 +38,17 @@
     font-size: 24px;
   }
 
-  .Del{
+.sign-in{
     position: relative; 
-    width: 350px;
+    width: 200px;
     height: 60px; 
     margin: auto; 
     top: 15%; 
     border-radius: 20px; 
     background-color: aliceblue;
-  }
+}
 
-  .route-del{
+.route-sign{
     border-radius: 20px; 
     position: relative; 
     height: 100%; 
@@ -59,7 +59,7 @@
     font-size: 24px;
   }
 
-  .foot{
+.foot{
     position: absolute;
     top: 75%; 
     width: 100%;

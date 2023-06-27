@@ -10,6 +10,7 @@ import { FrigoModule } from './contenu/frigo/frigo.module';
 import { FavorisModule } from './contenu/favoris/favoris.module';
 import { MenuModule } from './contenu/menu/menu.module';
 import { AproposModule } from './contenu/apropos/apropos.module';
+import { SubscribeModule } from './contenu/subscribe/subscribe.module';
 import { MenuPlannerComponent } from './contenu/PlanifierMenu/menu-planner.component';
 import { FormsModule } from '@angular/forms';
 import { MenuPlannerModule } from './contenu/PlanifierMenu/menu-planner.module';
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FavorisModule,
     MenuModule,
     AproposModule,
+    SubscribeModule,
     MenuPlannerModule,
     HttpClientModule
   ],

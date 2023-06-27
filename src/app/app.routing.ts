@@ -30,7 +30,11 @@ const routes: Routes = [
 
   { path: "PlanifierMenu",
   loadChildren: () => import('./contenu/PlanifierMenu/menu-planner.module').then(m => m.MenuPlannerModule)
-}
+  },
+  {
+    path: "subscribe",
+    loadChildren: () => import('./contenu/subscribe/subscribe.module').then(m => m.SubscribeModule)
+  }
 
 ];
 

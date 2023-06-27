@@ -1,0 +1,20 @@
+<div id="page" class="hfeed site"><!-- start page wrapper -->
+    <div style="position: relative;">
+      <app-header></app-header>
+    </div>
+    <div class="sign-in">
+      <h1>Authentification</h1>
+      <div class="pseudo"> 
+        <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
+      </div>
+      <div class="password"> 
+        <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" class="password-input"> 
+      </div>
+      <div class="sign-button"> 
+        <input type="submit" name="Connecter" value="Ajouter" class="button" >
+      </div>
+    </div>
+    <div class="foot">
+      <app-footer></app-footer>
+    </div>
+  </div><!-- end #page hfeed site -->
