@@ -1,0 +1,92 @@
+<div id="page" class="hfeed site"><!-- start page wrapper -->
+    <app-header></app-header>
+
+    <div class="container searchbardiv" id="formsearch">
+        <form role="search" method="get" id="searchform">
+            <div class="input-group">
+                <input type="text" id="searchbox" class="form-control" name="s">
+                <div class="input-group-btn">
+                    <button class="btn btn-search" id="searchsubmit" type="submit">
+                        <strong>Search</strong>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div><!-- end searchbardiv -->
+    
+    <div class="head-title">
+        <div class="container">
+            <h2 class="page-title">La Recette</h2>
+        </div><!-- end container -->
+    </div><!-- end head-title -->
+
+    <div id="main">
+        <div class="container">
+
+            <div class="recipe-content">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="recipe-lvl">
+                            <span>LEVEL : <a href="#">MASTER</a></span>
+                            <span>TIME : 2 HOURS</span>
+                        </div><!-- end recipe level -->
+                        <div class="recipe-head">
+                            <h1 class="recipe-title">{{single.title}}</h1>
+                            <div class="recipe-auth">
+                                <img [src]="single.featured_image" alt="recipe author">
+                                <span>Posted by <a href="#">{{single.publisher}}</a></span>
+                            </div><!-- recipe author -->
+                            <div class="recipe-finger">
+
+                                <div class="box-sharing">
+                                    <a href="#"><i class="fas fa-print"></i></a>
+                                    <a href="#"><i class="fas fa-share-alt"></i></a>
+                                    <a href="#"><i class="fas fa-bookmark"></i></a>
+                                </div>
+
+                                <div class="recipe-rating">
+                                    <span>DELICIOUS : <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i></span>
+                                </div>
+                            </div><!-- end recipe finger -->
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <figure class="recipe-pict">
+                            <img [src]="single.featured_image" alt="IMG 01">
+                        </figure>
+                    </div><!-- end col -->
+                    <div class="col-md-6">
+                        <div class="detail-desc">
+                            <p><strong>DESCRIPTION</strong></p>
+                            <p> {{single.description}}</p>
+                        </div><!-- recipe desc -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="space-section"></div>
+
+                <div class="row">
+                    <div class="ingredient col-md-13">
+                        <p><strong>INGREDIENTS</strong></p>
+                    <ul>
+                        <li *ngFor="let ingredient of single.ingredients">{{ ingredient }}</li>
+                    </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="space-section"></div>
+
+            </div><!-- end recipe content -->
+
+        </div><!-- end container -->
+    </div><!-- end main -->
+
+    <app-footer></app-footer>
+
+</div><!-- end #page hfeed site -->
