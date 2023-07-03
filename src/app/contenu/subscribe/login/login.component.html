@@ -1,26 +1,20 @@
 <div id="page" class="hfeed site"><!-- start page wrapper -->
-    <div style="position: relative;">
-      <app-header></app-header>
+  <div style="position: relative;">
+    <app-header></app-header>
+  </div>
+  <div class="log-in">
+    <h1>Authentification</h1>
+    <div class="pseudo"> 
+      <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
     </div>
-    <div class="login">
-      <h1>Inscription</h1>
-      <div class="nom"> 
-        <input type="text" placeholder="Nom" (input)="handleNomChange($event)" class="nom-input">
-      </div>
-      <div class="prenom"> 
-        <input type="text" placeholder="Prenom" (input)="handlePrenomChange($event)" class="prenom-input"> 
-      </div>
-      <div class="pseudo"> 
-        <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
-      </div>
-      <div class="password"> 
-        <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" class="password-input"> 
-      </div>
-      <div class="log-button"> 
-        <input type="submit" name="Ajouter" value="Ajouter" class="button">
-      </div>
+    <div class="password"> 
+      <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" class="password-input"> 
     </div>
-    <div class="foot">
-      <app-footer></app-footer>
+    <div class="log-button"> 
+      <input type="submit" name="Connecter" value="Authentifier" class="button" >
     </div>
-  </div><!-- end #page hfeed site -->
+  </div>
+  <div class="foot">
+    <app-footer></app-footer>
+  </div>
+</div><!-- end #page hfeed site -->

@@ -8,12 +8,22 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit{
 
+  Nom: string = '';
+  Prenom: string = '';
   Pseudo: string = '';
   Password: string = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleNomChange(event: any) {
+    this.Nom = event.target.value;
+  }
+
+  handlePrenomChange(event: any) {
+    this.Prenom = event.target.value;
   }
 
   handlePseudoChange(event: any) {
@@ -23,4 +33,5 @@ export class SignInComponent implements OnInit{
   handlePasswordChange(event: any) {
     this.Password = event.target.value;
   }
+
 }

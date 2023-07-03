@@ -3,15 +3,21 @@
       <app-header></app-header>
     </div>
     <div class="sign-in">
-      <h1>Authentification</h1>
+      <h1>Inscription</h1>
+      <div class="nom"> 
+        <input type="text" placeholder="Nom" (input)="handleNomChange($event)" class="nom-input">
+      </div> 
+      <div class="prenom"> 
+        <input type="text" placeholder="Prenom" (input)="handlePrenomChange($event)" class="prenom-input"> 
+      </div> 
       <div class="pseudo"> 
         <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
       </div>
       <div class="password"> 
         <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" class="password-input"> 
       </div>
-      <div class="sign-button"> 
-        <input type="submit" name="Connecter" value="Ajouter" class="button" >
+      <div class="sign-in-button"> 
+        <input type="submit" name="Ajouter" value="Ajouter" class="button">
       </div>
     </div>
     <div class="foot">
