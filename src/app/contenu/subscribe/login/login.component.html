@@ -3,15 +3,16 @@
     <app-header></app-header>
   </div>
   <div class="log-in">
+    <p *ngIf="wrongCredentials"> Veuillez réessayer!</p>
     <h1>Authentification</h1>
     <div class="pseudo"> 
-      <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
+      <input type="text" placeholder="Pseudo" name="pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
     </div>
     <div class="password"> 
-      <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" class="password-input"> 
+      <input type="password" placeholder="Password" name="password" (input)="handlePasswordChange($event)" class="password-input"> 
     </div>
     <div class="log-button"> 
-      <input type="submit" name="Connecter" value="Authentifier" class="button" >
+      <input type="submit" name="Connecter" value="Authentifier" class="button" (click)="login()" >
     </div>
   </div>
   <div class="foot">

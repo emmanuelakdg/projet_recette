@@ -4,23 +4,24 @@
     </div>
     <div class="sign-in">
       <h1>Inscription</h1>
+      <p *ngIf="wrongCredentials"> Veuillez réessayer!</p>
       <div class="nom"> 
-        <input type="text" placeholder="Nom" (input)="handleNomChange($event)" class="nom-input">
+        <input type="text" placeholder="Nom" (input)="handleNomChange($event)" name="nom" class="nom-input">
       </div> 
       <div class="prenom"> 
-        <input type="text" placeholder="Prenom" (input)="handlePrenomChange($event)" class="prenom-input"> 
+        <input type="text" placeholder="Prenom" (input)="handlePrenomChange($event)" name="prenom" class="prenom-input"> 
       </div> 
       <div class="pseudo"> 
-        <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)" class="pseudo-input">
+        <input type="text" placeholder="Pseudo" (input)="handlePseudoChange($event)"  name="pseudo" class="pseudo-input">
       </div>
       <div class="password"> 
-        <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" class="password-input"> 
+        <input type="password" placeholder="Password" (input)="handlePasswordChange($event)" name="password" class="password-input"> 
       </div>
       <div class="sign-in-button"> 
-        <input type="submit" name="Ajouter" value="Ajouter" class="button">
+        <input type="submit" name="Ajouter" value="Ajouter" class="button" (click)="sign()">
       </div>
     </div>
     <div class="foot">
-      <app-footer></app-footer>
+   <!-- <app-footer></app-footer>-->  
     </div>
   </div><!-- end #page hfeed site -->

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../../../service/api.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -12,8 +13,10 @@ export class SignInComponent implements OnInit{
   Prenom: string = '';
   Pseudo: string = '';
   Password: string = '';
+  wrongCredentials = false;
 
-  constructor() { }
+
+  constructor(private register: ApiService,private router :Router) { }
 
   ngOnInit() {
   }
@@ -34,4 +37,8 @@ export class SignInComponent implements OnInit{
     this.Password = event.target.value;
   }
 
+  sign(){
+    this.wrongCredentials= false;
+    this.register.register(this.Nom,this.Prenom,this.Pseudo,this.Password).subscribe(result=>{this.router.navigate(['/subscribe/login'])},error=>{this.wrongCredentials= true}) ;
+  }
 }
