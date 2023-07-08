@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FrigoComponent } from './frigo.component';
 import { FrigoRoutingModule } from './frigo.routing';
 import { PagesModule } from 'src/app/pages/pages.module';
-import { AddIngrComponent } from './add-ingr/add-ingr.component';
-import { DelIngrComponent } from './del-ingr/del-ingr.component';
+import { ManageFridgeComponent } from './manage-fridge/manage-fridge.component';
+import { ListComponent } from './list/list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     FrigoRoutingModule,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
-  declarations: [FrigoComponent, AddIngrComponent, DelIngrComponent]
+  declarations: [FrigoComponent, ManageFridgeComponent, ListComponent],
+  exports:[
+    ManageFridgeComponent
+  ]
 })
 export class FrigoModule { }

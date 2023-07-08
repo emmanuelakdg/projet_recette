@@ -1,0 +1,13 @@
+<div id="page" class="hfeed site">
+    <div style="position: relative">
+        <app-header></app-header>
+    </div>
+    <div class="list">
+        <ul>
+            <li *ngFor="let ingredient of ingredientList">{{ ingredient.name }} - {{ ingredient.quantity }}</li>
+        </ul>
+    </div>
+    <div class="foot">
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,66 +1,66 @@
 .Frigo {
-    position: absolute;
-    height: 67%;
-    width: 100%; 
-    background-image: url('/assets/images/content/frigo-add.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: rgb(255, 255, 255);
-    font-family: 'Yaldevi Colombo SemiBold';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 32px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-shadow: 0px 4px 4px rgba(11, 48, 182, 0.25);
-  }
-  
-  .Add{
-    position: relative; 
-    width: 300px;
-    height: 60px; 
-    margin: auto; 
-    top: 10%;
-    border-radius: 20px;
-    background-color: aliceblue;
-  }
+  position: absolute;
+  height: 67%;
+  width: 100%; 
+  background-image: url('/assets/images/content/frigo-add.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  font-family: 'Yaldevi Colombo SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 32px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 4px 4px rgba(11, 48, 182, 0.25);
+}
 
-  .route-add{
-    border-radius: 20px; 
-    position: relative; 
-    height: 100%; 
-    width: 100%;  
-    font-family: 'Inter'; 
-    font-style: normal; 
-    font-weight: 400; 
-    font-size: 24px;
-  }
+.manage{
+  position: relative; 
+  width: 250px;
+  height: 60px; 
+  margin: auto; 
+  top: 10%;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
 
-  .Del{
-    position: relative; 
-    width: 350px;
-    height: 60px; 
-    margin: auto; 
-    top: 15%; 
-    border-radius: 20px; 
-    background-color: aliceblue;
-  }
+.manage-route{
+  border-radius: 20px; 
+  position: relative; 
+  height: 100%; 
+  width: 100%;  
+  font-family: 'Inter'; 
+  font-style: normal; 
+  font-weight: 400; 
+  font-size: 24px;
+}
 
-  .route-del{
-    border-radius: 20px; 
-    position: relative; 
-    height: 100%; 
-    width: 100%;  
-    font-family: 'Inter'; 
-    font-style: normal; 
-    font-weight: 400; 
-    font-size: 24px;
-  }
+.list{
+  position: relative; 
+  width: 250px;
+  height: 60px; 
+  margin: auto; 
+  top: 15%; 
+  border-radius: 20px; 
+  background-color: aliceblue;
+}
 
-  .foot{
-    position: absolute;
-    top: 75%; 
-    width: 100%;
-  }
+.list-route{
+  border-radius: 20px; 
+  position: relative; 
+  height: 100%; 
+  width: 100%;  
+  font-family: 'Inter'; 
+  font-style: normal; 
+  font-weight: 400; 
+  font-size: 24px;
+}
+
+.foot{
+  position: absolute;
+  top: 75%; 
+  width: 100%;
+}
