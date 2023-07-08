@@ -14,7 +14,8 @@
 }
 
 body {
-  /* background-image: url("C:\Users\bmd-tech\Documents\DIC_1\amina\plat1.png"); */
+   background-image: url('/assets/images/content/menumenu.jpg'); 
+  /* background-image: url("C:\Users\bmd-tech\Desktop\menu.jpg");*/ 
   background-size: cover;
   background-repeat: no-repeat;
 }
