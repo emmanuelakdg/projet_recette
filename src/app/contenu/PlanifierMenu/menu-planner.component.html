@@ -1,32 +1,24 @@
-
-<link rel="stylesheet" type="text/css" href="./menu-planner.component.css">
-
-<h2 class="menu-planner-title">Planificateur de menu</h2>
-
-
-<body>
-  
-
-<div>
-  <label for="start-date">Date de début :</label>
-  <input type="date" id="start-date" [(ngModel)]="startDate">
+<div id="page" class="hfeed site">
+  <app-header></app-header>
 </div>
-
-
-<div>
-  <label for="end-date">Date de fin :</label>
-  <input type="date" id="end-date" [(ngModel)]="endDate">
-</div> 
-</body>
-
-<button (click)="generateMenu()">Générer le menu</button>
-
-<hr>
-
-<div *ngIf="menuGenerated">
-  <h3>Menu généré :</h3>
-  <ul>
-    <li *ngFor="let meal of menu">{{ meal }}</li>
-  </ul>
+<div class="menu-planner">
+  <h1>Planificateur de menu</h1>
+  <div class="DateDebut">
+    <label for="start-date">Date de début :</label>
+    <input type="date" id="start-date" [(ngModel)]="startDate">
+  </div>
+  <div class="DateFin">
+    <label for="end-date">Date de fin :</label>
+    <input type="date" id="end-date" [(ngModel)]="endDate">
+  </div>
+  <button (click)="generateMenu()">Générer le menu</button>
+  <div class="Generer" *ngIf="menuGenerated">
+    <h3>Menu généré :</h3>
+    <ul>
+      <li *ngFor="let meal of menu">{{ meal }}</li>
+    </ul>
+  </div>
 </div>
-
+<div class="foot">
+  <app-footer></app-footer>
+</div>
