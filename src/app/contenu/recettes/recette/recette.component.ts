@@ -16,9 +16,9 @@ export class RecetteComponent implements OnInit {
   single!: Result;
 
   constructor(private route: ActivatedRoute, private recetteService: RecetteService) { }
-
+  query:String = "meat" ;
   onGetRecettes(): void {
-    this.recetteService.getRecettes().subscribe(
+    this.recetteService.getRecettes(this.query).subscribe(
       (data: Recette) => {
         this.recettes = data;
         this.results = this.recettes.results;
@@ -38,6 +38,9 @@ export class RecetteComponent implements OnInit {
     var script1 = document.createElement('script');
     script1.src = "../../../../assets/js/main.js";
     document.body.append(script1);
+  }
+  handleQueryChange(event: any) {
+    this.query = event.target.value;
   }
 
 }

@@ -12,10 +12,14 @@ import { RecetteService } from 'src/app/service/recette.service';
 export class RecettesComponent implements OnInit {
   recettes!: Recette;
   results!: Result[];
-  constructor(private recetteService: RecetteService) { }
-
+  constructor(private recetteService: RecetteService,) { }
+    query:any = "" ;
+    
   onGetRecettes(): void {
-    this.recetteService.getRecettes().subscribe(
+    if ( localStorage.getItem('q') != null) {
+      this.query = localStorage.getItem('q');
+    }
+    this.recetteService.getRecettes(this.query).subscribe(
       (data: Recette) => {
         this.recettes = data;
         this.results = this.recettes.results;
@@ -32,5 +36,11 @@ export class RecettesComponent implements OnInit {
     script1.src = "../../../assets/js/main.js";
     document.body.append(script1);
   }
+
+  handleQueryChange(event: any) {
+    this.query = event.target.value;
+    localStorage.setItem('q',event.target.value) ;
+  }
+
 
 }

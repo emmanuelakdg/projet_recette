@@ -1,12 +1,12 @@
 <div id="page" class="hfeed site"><!-- start page wrapper -->
   <app-header></app-header>
 
-  <div class="container searchbardiv" id="formsearch">
-    <form role="search" method="get" id="searchform">
+  <div class="container searchbardiv" >
+    <form >
       <div class="input-group">
-        <input type="text" id="searchbox" class="form-control" name="s">
+        <input type="text"  class="form-control" placeholder="ingredient" name="query" id= "query" (input)="handleQueryChange($event)" >
         <div class="input-group-btn">
-          <button class="btn btn-search" id="searchsubmit" type="submit">
+          <button class="btn btn-search"  type="submit" (click)="onGetRecettes()">
             <strong>Search</strong>
           </button>
         </div>

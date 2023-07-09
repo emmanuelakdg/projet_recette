@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 
-$query = "rice tomato carrot"; // Changer cette valeur pour la requête de recherche souhaitée
+$query = $_REQUEST['q']; // Changer cette valeur pour la requête de recherche souhaitée
 
 $endpoint = 'https://food2fork.ca/api/recipe/search/';
 $params = array(
