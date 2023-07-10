@@ -16,7 +16,8 @@ export class RecetteComponent implements OnInit {
   single!: Result;
 
   constructor(private route: ActivatedRoute, private recetteService: RecetteService) { }
-   query:String = "" ;
+  query = localStorage.getItem('q')??'';
+
   onGetRecettes(): void {
     this.recetteService.getRecettes(this.query).subscribe(
       (data: Recette) => {

@@ -13,11 +13,12 @@ export class RecettesComponent implements OnInit {
   recettes!: Recette;
   results!: Result[];
   constructor(private recetteService: RecetteService,) { }
-    query:any = "" ;
+  query = localStorage.getItem('q')??'';
+
     
   onGetRecettes(): void {
     if ( localStorage.getItem('q') != null) {
-      this.query = localStorage.getItem('q');
+      this.query = localStorage.getItem('q')??'';
     }
     this.recetteService.getRecettes(this.query).subscribe(
       (data: Recette) => {
