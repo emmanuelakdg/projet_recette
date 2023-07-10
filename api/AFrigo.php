@@ -1,9 +1,10 @@
+
 <?php
-header("Access-Control-Allow-Origin: *") ;
+header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Methods: GET, POST, PUT , DELETE");
-header("Access-Control-Allow-Headers: Origin,X-Requested-With,Content-Type,Accept");
-header("Content-Type:application/json;charset=UTF-8") ;
+header("Access-Control-Allow-Headers: Origin,X-Requested-With,Content-Type,Accept, Authorization");
+//header("Content-Type:application/json;charset=UTF-8") ;
 
 
 
@@ -41,21 +42,14 @@ if (isset($_REQUEST['add'])) {
     $postdata= file_get_contents("php://input") ;
     $data = json_decode($postdata) ;
    
-        $pseudo =trim($data-> pseudo);
-        $nom_ing = trim($data->nom_ing);
-        $quantite = trim($data->quantite);
+    $pseudo = isset($data->pseudo) && !empty($data->pseudo) ? trim($data->pseudo) : '';
+    $nom_ing = isset($data->nom_ing) && !empty($data->nom_ing) ? trim($data->nom_ing) : '';
+    $quantite = isset($data->quantite) && !empty($data->quantite) ? trim($data->quantite) : 0;
+    
     
     if (enregistrerIngredientsUtilisateur($pseudo, $nom_ing, $quantite)) {
         echo "Ingrédients enregistrés avec succès.";
         http_response_code(200);
 
-    } else {
-        echo "Erreur lors de l'enregistrement des ingrédients. Veuillez vérifier le pseudo de l'utilisateur.";
-        http_response_code(400);
-
     }
-} else {
-    echo "Requête non valide.";
-    http_response_code(400);
-
-}
+} 

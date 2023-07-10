@@ -55,24 +55,30 @@ export class ApiService {
 
 
   getIngredients(pseudo: string): Observable<Ingredient[]> {
-    const data = {
-      pseudo: pseudo
-    };
-  
-    return this.httpClient.post<any[]>(this.base_url+"/GFrigo?pseudo="+pseudo, data).pipe(
+    return this.httpClient.get<any[]>(this.base_url+"GFrigo?pseudo="+pseudo).pipe(
       map(data => {
         return data.map(item => new Ingredient(item.nom_ing, item.quantite));
       })
     );
   }
   addIngredient(pseudo: string, nom: string, quantite: number): Observable<boolean> {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+
     const data = {
       pseudo: pseudo,
       nom_ing: nom,
       quantite: quantite
     };
-  
-    return this.httpClient.post<boolean>(this.base_url+"/AFrigo?add", data)
+      return new Observable<boolean>((observer)=>{
+      this.httpClient.post("http://localhost/projet_recette/api/AFrigo?add" ,data, { headers }).subscribe(
+        result=>{observer.next(true);
+          observer.complete() ;
+        },error => {
+          observer.error(false);
+          observer.complete();
+        }
+      ) ;
+     }) ;
   }
  
   deleteIngredient(pseudo: string, nom: string): Observable<boolean> {
@@ -81,7 +87,7 @@ export class ApiService {
       nom_ing: nom
     };
   
-    return this.httpClient.post<boolean>(this.base_url+"/DFrigo", data);
+    return this.httpClient.post<boolean>(this.base_url+"DFrigo", data);
   }
   
   

@@ -36,8 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $postdata= file_get_contents("php://input") ;
         $data = json_decode($postdata) ;
        
-            $pseudo =trim($data-> pseudo);
-            $nom_ing = trim($data->nom_ing);
+           
+            $pseudo = isset($data->pseudo) && !empty($data->pseudo) ? trim($data->pseudo) : '';
+            $nom_ing = isset($data->nom_ing) && !empty($data->nom_ing) ? trim($data->nom_ing) : '';
 
     if (supprimerIngredientUtilisateur($pseudo, $nom_ing)) {
         echo "Ingrédient supprimé avec succès.";

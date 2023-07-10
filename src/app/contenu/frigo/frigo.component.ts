@@ -27,9 +27,12 @@ export class FrigoComponent implements OnInit {
 
   handleQuanhange(event: any) {
     this.quantite = event.target.value;
+    console.log(this.quantite) ;
   }
   handleNom_ingChange(event: any) {
     this.nom_ing = event.target.value;
+    console.log(this.nom_ing) ;
+
   }
   
     
