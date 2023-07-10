@@ -1,18 +1,6 @@
 <div id="page" class="hfeed site"><!-- start page wrapper -->
     <app-header></app-header>
-    <div class="container searchbardiv" >
-        <form role="search">
-          <div class="input-group">
-            <input type="text"  class="form-control" name="query" (input)="handleQueryChange($event)" >
-            <div class="input-group-btn">
-              <button class="btn btn-search"  type="submit" (click)="onGetRecettes()">
-                <strong>Search</strong>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    
+
     <div class="head-title">
         <div class="container">
             <h2 class="page-title">La Recette</h2>
@@ -64,7 +52,7 @@
                         <div class="detail-desc">
                             <p><strong>DESCRIPTION</strong></p>
                             <p> {{single.description}}</p>
-                            <a> {{single.source_url}}</a>
+                          <p>Lien:<a> {{single.source_url}}</a></p>  
                         </div><!-- recipe desc -->
                     </div><!-- end col -->
                 </div><!-- end row -->

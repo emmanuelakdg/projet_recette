@@ -2,15 +2,37 @@
   <div style="position: relative">
     <app-header></app-header>
   </div>
-  <div class="Frigo" >
+  <div class="Frigo">
+  <div class="card">
     <h1>Mon frigo virtuel</h1>
-    <div class="manage">
-      <a routerLink="manage" class="manage-route"> gerer frigo </a>
-    </div>
-    <div class="list">
-      <a routerLink="list" class="list-route"> liste ingrédients </a>
-    </div>
+    <ul>
+      <li *ngFor="let ingredient of ingredients">
+        <span>{{ ingredient.nom_ing }} {{ ingredient.quantite }}</span>
+        <i class="fa fa-trash" (click)="deleteIngredient(ingredient.nom_ing)"></i>
+      </li>
+    </ul>
+    <p *ngIf="erreurMessage" class="erreur">{{ erreurMessage }}</p>
+
   </div>
+
+  <div class="card form-card">
+    <h1>Ajouter un ingrédient</h1>
+    <form>
+    
+        <div>
+          <label>Nom de l'ingredient :</label>
+          <input type="text" (input)="handleNom_ingChange($event)" name ="nom_ing_ing" required>
+        </div>
+        <div>
+          <label>Quantité :</label>
+          <input type="number" (input)="handleQuanhange($event)" name ="quantite"required>
+        </div>
+        <button type="submit" (click)="addIngredient()" >Ajouter</button>
+      
+    </form>
+  </div>
+</div>
+
   <div class="foot">
     <app-footer></app-footer>
   </div>

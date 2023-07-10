@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Ingredient } from '../contenu/frigo/ingredients';
+import { map } from 'rxjs/operators';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +13,7 @@ export class ApiService {
 
   Login_url= "http://localhost/projet_recette/api/LUser.php"
   Register_url= "http://localhost/projet_recette/api/RUser.php"
+  base_url =  "http://localhost/projet_recette/api/" ;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -47,6 +52,45 @@ export class ApiService {
      ) ;
     })
  }
+
+
+  getIngredients(pseudo: string): Observable<Ingredient[]> {
+    const data = {
+      pseudo: pseudo
+    };
+  
+    return this.httpClient.post<any[]>(this.base_url+"/GFrigo?pseudo="+pseudo, data).pipe(
+      map(data => {
+        return data.map(item => new Ingredient(item.nom_ing, item.quantite));
+      })
+    );
+  }
+  addIngredient(pseudo: string, nom: string, quantite: number): Observable<boolean> {
+    const data = {
+      pseudo: pseudo,
+      nom_ing: nom,
+      quantite: quantite
+    };
+  
+    return this.httpClient.post<boolean>(this.base_url+"/AFrigo?add", data)
+  }
+ 
+  deleteIngredient(pseudo: string, nom: string): Observable<boolean> {
+    const data = {
+      pseudo: pseudo,
+      nom_ing: nom
+    };
+  
+    return this.httpClient.post<boolean>(this.base_url+"/DFrigo", data);
+  }
+  
+  
+  
+
+
+
+
+ 
    
   
 }

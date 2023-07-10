@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FrigoComponent } from './frigo.component';
 import { FrigoRoutingModule } from './frigo.routing';
-import { PagesModule } from 'src/app/pages/pages.module';
-import { ManageFridgeComponent } from './manage-fridge/manage-fridge.component';
-import { ListComponent } from './list/list.component';
+import { PagesModule } from '../../../app/pages/pages.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -14,9 +12,8 @@ import { FormsModule } from '@angular/forms';
     PagesModule,
     FormsModule
   ],
-  declarations: [FrigoComponent, ManageFridgeComponent, ListComponent],
+  declarations: [FrigoComponent],
   exports:[
-    ManageFridgeComponent
   ]
 })
 export class FrigoModule { }

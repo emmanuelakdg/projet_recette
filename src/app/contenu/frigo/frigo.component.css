@@ -1,66 +1,102 @@
-.Frigo {
-  position: absolute;
-  height: 67%;
-  width: 100%; 
-  background-image: url('/assets/images/content/frigo-add.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: rgb(255, 255, 255);
-  font-family: 'Yaldevi Colombo SemiBold';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 32px;
-  align-items: center;
+#page {
+  color: red;
+  font-size: 18px;
   text-align: center;
-  letter-spacing: 0.1em;
-  text-shadow: 0px 4px 4px rgba(11, 48, 182, 0.25);
 }
 
-.manage{
-  position: relative; 
-  width: 250px;
-  height: 60px; 
-  margin: auto; 
-  top: 10%;
-  border-radius: 20px;
-  background-color: aliceblue;
+.Frigo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
-.manage-route{
-  border-radius: 20px; 
-  position: relative; 
-  height: 100%; 
-  width: 100%;  
-  font-family: 'Inter'; 
-  font-style: normal; 
-  font-weight: 400; 
-  font-size: 24px;
+.Frigo h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-decoration: black;
 }
 
-.list{
-  position: relative; 
-  width: 250px;
-  height: 60px; 
-  margin: auto; 
-  top: 15%; 
-  border-radius: 20px; 
-  background-color: aliceblue;
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  align-items: center;
 }
 
-.list-route{
-  border-radius: 20px; 
-  position: relative; 
-  height: 100%; 
-  width: 100%;  
-  font-family: 'Inter'; 
-  font-style: normal; 
-  font-weight: 400; 
-  font-size: 24px;
+.card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
 }
 
-.foot{
-  position: absolute;
-  top: 75%; 
+.card li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card li span {
+  margin-right: 10px;
+}
+
+.card i {
+  cursor: pointer;
+  align-items: center;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-card input[type="text"],
+.form-card input[type="number"] {
+  box-sizing: border-box;
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.form-card button:hover {
+  background-color: #45a049;
+}
+
+.erreur {
+  color: red;
+  margin-top: 10px;
+}
+
+.foot {
+  position: relative;
+  top: 75%;
+  width: 100%;
+}
+
+li {
+  font-size: 16px;
+  color: red;
 }
