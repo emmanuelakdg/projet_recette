@@ -1,17 +1,23 @@
-<div id="page" class="hfeed site"><!-- start page wrapper -->
-    <div style="position: relative;">
-      <app-header></app-header>
+<div id="page" class="hfeed site">
+  <div style="position: relative;">
+    <app-header></app-header>
+  </div>
+  <div class="subscribe" *ngIf="pseudo === ''">
+    <h1>Bienvenue</h1>
+    <div class="login">
+      <a routerLink="./login" class="route-log"> LOGIN </a>
     </div>
-    <div class="subscribe">
-      <h1>Bienvenue</h1>
-      <div class="login"> 
-        <a routerLink="./login" class="route-log"> LOGIN </a> 
-      </div>
-      <div class="sign-in"> 
-        <a routerLink="./sign-in" class="route-sign"> SIGN-IN </a>
-      </div>
+    <div class="sign-in">
+      <a routerLink="./sign-in" class="route-sign"> SIGN-IN </a>
     </div>
-    <div class="foot">
-      <app-footer></app-footer>
+  </div>
+  <div class="subscribe" *ngIf="pseudo !== ''">
+    <h1>Bienvenue {{ pseudo }}</h1>
+    <div class="logout">
+      <button (click)="logOut()">Déconnexion</button>
     </div>
-  </div><!-- end #page hfeed site -->
+  </div>
+  <div class="foot">
+    <app-footer></app-footer>
+  </div>
+</div>

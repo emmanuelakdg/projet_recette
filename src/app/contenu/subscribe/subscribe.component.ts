@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscribe.component.css']
 })
 export class SubscribeComponent implements OnInit {
+  pseudo: string = localStorage.getItem('pseudo') ?? '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+  logOut(){
+    localStorage.clear();
+    window.location.reload();
+
   }
 
 }

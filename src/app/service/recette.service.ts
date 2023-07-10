@@ -12,9 +12,8 @@ export class RecetteService {
   constructor(private http: HttpClient) { }
 
   getRecettes(query:any): Observable<Recette> {
-    return this.http.get<Recette>('http://localhost/api/recettes.php?q='+query);
+    return this.http.get<Recette>('http://localhost/projet_recette/api/recettes.php?q='+query);
   }
-
  
  }
   // getRecette(id: number): Observable<Result> {

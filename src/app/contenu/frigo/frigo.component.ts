@@ -17,7 +17,6 @@ export class FrigoComponent implements OnInit {
 
   ngOnInit() {
     this.getIngredients()  ;
-    
   }
    
   ingredients: Ingredient[] = [];
